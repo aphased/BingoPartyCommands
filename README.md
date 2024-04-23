@@ -24,8 +24,8 @@ Features which work differently from Hypixel settings are explained.
 | invite      | Self-explanatory. Leave IGN out to invite yourself.                                                                                   | inv          |
 | allinvite   | Toggles the party setting.                                                                                                            |              |
 | speak       | Players with permissions can talk in party chat during p mute even without Hypixel party mod rank.                                    | say          |
-| repeat      | Like speak, but will repeat a message a number of times (default 5), e.g. for announcing a splash. (Example output: "`Party > [MVP++ BingoParty: [MVP+] Splasher: HUB 29 (3)`") | rep          |
-| customrep   | Like repeat, but with more customization options. First argument is number of repetitions, second is waiting duration/pause between each message. | customrepeat, crep, crepeat |
+| repeat      | Like speak, but with built-in repetitions of your message (2 seconds apart, maximum of 7). Defaults to 5 repetitions if the first word of your message isn’t a number. Don’t spam this. Useful e.g. for announcing a splash! | rep          |
+| customrep   | Like repeat, but with more customization options. First argument is number of repetitions, second is waiting duration/pause between each message, then the rest is your text to be output. | customrepeat, crep, crepeat |
 | rule        | Output Bingo Brewers' rules as listed in the Discord channel, 1-7. Defaults to saying rule 1 in party chat if no number was provided. |              |
 | poll        | Creates a Hypixel party poll. Don't spam this.                                                                                        |              |
 | help        | Points to the link for this readme.                                                                                                   |              |
