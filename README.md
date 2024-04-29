@@ -12,6 +12,7 @@ Features which work differently from Hypixel settings are explained.
 
 |  Command    |                                                             Functionality                                                             |  Alias(es)   |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------|--------------|
+| boopme      | `/boop`s you, the sender, back _if_ you have permissions. You can use this to test if everything is set up and that you are registered correctly. |              |
 | disband     | Is always disallowed.                                                                                                                 |              |
 | transfer    | Self-explanatory, should not need to be used though.                                                                                  |              |
 | mute        | Self-explanatory.                                                                                                                     | unmute       |
