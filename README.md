@@ -10,26 +10,26 @@ However, the one used in the primary column is how this feature is referred to i
 
 Features which work differently from Hypixel settings are explained.
 
-|  Command    |                                                             Functionality                                                             |  Alias(es)   |
-|-------------|---------------------------------------------------------------------------------------------------------------------------------------|--------------|
-| boopme      | `/boop`s you, the sender, back _if_ you have permissions. You can use this to test if everything is set up and that you are registered correctly. |              |
-| disband     | Is always disallowed.                                                                                                                 |              |
-| transfer    | Self-explanatory, should not need to be used though.                                                                                  |              |
-| mute        | Self-explanatory.                                                                                                                     | unmute       |
-| promote     | Self-explanatory, but not even strictly required in this system. Leave IGN out to promote yourself.                                   | pro          |
-| kickoffline | Self-explanatory, to make space for new players if party is full as Hypixel's limit is 100 players.                                   | kickafk      |
-| kick        | Self-explanatory.                                                                                                                     | remove       |
-| block       | Kick/remove with additional ignore add.                                                                                               | ban          |
-| unblock     | Revert ignore add, but don't re-invite.                                                                                               | unban        |
-| stream      | (Re-)open party into a public one, with default size of 100, useful e.g. after briefly transferring to a non-MVP++ ranked player.     | public, open |
-| invite      | Self-explanatory. Leave IGN out to invite yourself.                                                                                   | inv          |
-| allinvite   | Toggles the party setting.                                                                                                            |              |
-| speak       | Players with permissions can talk in party chat during p mute even without Hypixel party mod rank.                                    | say          |
+|  Command    |                                                             Functionality                                                             |  Alias(es)      |
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------|-----------------|
+| boopme      | `/boop`s you, the sender, back _if_ you have permissions. You can use this to test if everything is set up and that you are registered correctly.       |
+| disband     | Is always disallowed.                                                                                                                 |                 |
+| transfer    | Self-explanatory, should not need to be used though.                                                                                  |                 |
+| mute        | Self-explanatory.                                                                                                                     | unmute          |
+| promote     | Self-explanatory, but not even strictly required in this system. Leave IGN out to promote yourself.                                   | pro             |
+| kickoffline | Self-explanatory, to make space for new players if party is full as Hypixel's limit is 100 players.                                   | kickafk, ko, ka |
+| kick        | Self-explanatory.                                                                                                                     | remove          |
+| block       | Kick/remove with additional ignore add.                                                                                               | ban             |
+| unblock     | Revert ignore add, but don't re-invite.                                                                                               | unban           |
+| stream      | (Re-)open party into a public one, with default size of 100, useful e.g. after briefly transferring to a non-MVP++ ranked player.     | public, open    |
+| invite      | Self-explanatory. Leave IGN out to invite yourself.                                                                                   | inv             |
+| allinvite   | Toggles the party setting.                                                                                                            |                 |
+| speak       | Players with permissions can talk in party chat during p mute even without Hypixel party mod rank.                                    | say             |
 | repeat      | Like speak, but with built-in repetitions of your message (2 seconds apart, maximum of 7). Defaults to 5 repetitions if the first word of your message isn’t a number. Don’t spam this. Useful e.g. for announcing a splash! | rep          |
 | customrep   | Like repeat, but with more customization options. First argument is number of repetitions, second is waiting duration/pause between each message, then the rest is your text to be output. | customrepeat, crep, crepeat |
-| rule        | Output Bingo Brewers' rules as listed in the Discord channel, 1-7. Defaults to saying rule 1 in party chat if no number was provided. |              |
-| poll        | Creates a Hypixel party poll. Don't spam this.                                                                                        |              |
-| help        | Points to the link for this readme.                                                                                                   |              |
+| rule        | Output Bingo Brewers' rules as listed in the Discord channel, 1-7. Defaults to saying rule 1 in party chat if no number was provided. |                 |
+| poll        | Creates a Hypixel party poll. Don't spam this.                                                                                        |                 |
+| help        | Points to the link for this readme.                                                                                                   |                 |
 
 
 Developer/account-admin reserved (these won't work or make sense to use for anyone else):
