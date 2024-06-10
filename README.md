@@ -28,7 +28,7 @@ Features which work differently from Hypixel settings are explained.
 | repeat      | Like speak, but with built-in repetitions of your message (2 seconds apart, maximum of 7). Defaults to 5 repetitions if the first word of your message isn’t a number. Don’t spam this. Useful e.g. for announcing a splash! | rep          |
 | customrep   | Like repeat, but with more customization options. First argument is number of repetitions, second is waiting duration/pause between each message, then the rest is your text to be output. | customrepeat, crep, crepeat |
 | rule        | Output Bingo Brewers' rules as listed in the Discord channel, 1-7. Defaults to saying rule 1 in party chat if no number was provided. |                 |
-| guide       | Posts the link to this month's Bingo Guide by Indigo_Polecat on the [Hypixel Forums](hypixel.net). Sends only once per 30 seconds.    | gd, g           |
+| guide       | Posts the link to this month's Bingo Guide by Indigo_Polecat on the [Hypixel Forums](https://hypixel.net). Sends only once per 30 seconds.    | gd, g           |
 | poll        | Creates a Hypixel party poll. Don't spam this.                                                                                        |                 |
 | help        | Points to the link for this readme.                                                                                                   |                 |
 
