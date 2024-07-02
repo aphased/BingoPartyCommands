@@ -30,7 +30,7 @@ In-game on hypixel.net, you may `/boop BingoParty` (aka the public party leader 
 | stream      | (Re-)open party into a public one, with default size of 100, useful e.g. after briefly transferring to a non-MVP++ ranked player.     | public, open    |
 | invite      | Self-explanatory. Leave IGN out to invite yourself.                                                                                   | inv             |
 | allinvite   | Toggles the party setting.                                                                                                            |                 |
-| say         | Players with permissions can talk in party chat during p mute even without Hypixel party mod rank.                                    | speak           |
+| say         | Players with permissions can talk in party chat during p mute even without Hypixel party mod rank. (and even while not being in the party!) | speak           |
 | repeat      | Like speak, but with built-in repetitions of your message (2 seconds apart, maximum of 7). Defaults to 5 repetitions if the first word of your message isn’t a number. Don’t spam this. Useful e.g. for announcing a splash! | rep          |
 | customrep   | Like repeat, but with more customization options. First argument is number of repetitions, second is waiting duration/pause between each message, then the rest is your text to be output. | customrepeat, crep, crepeat |
 | rule        | Output Bingo Brewers' rules as listed in the Discord channel, 1-7. Defaults to saying rule 1 in party chat if no number was provided. |                 |
