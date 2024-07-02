@@ -50,6 +50,9 @@ Developer/account-admin reserved – these are set to not work for anyone else (
 | setguide       | Override the Discord-fetched `!p guide` link and set it manually in case of failures.   | sg                      |
 | limbo          | Trigger sending the in-game bot account to Hypixel's "Limbo" area.                      | sendlimbo, §            |
 | close          | The reverse operation to `!p stream`.                                                   |                         |
+| disable        | Temporarily toggle features/commands (e.g. `!p disable promote`).                       |                         |
+| enable         | Undo the above (e.g. `!p enable promote`).                                              |                         |
+| printDisabled  | List all of the currently deactivated/disabled comamnds.                                | printdisabled, lsdisabled, lstoggled |
 
 
 ## Command alias
