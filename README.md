@@ -10,6 +10,12 @@ However, the one used in the primary column is how this feature is referred to i
 
 Features which work differently from Hypixel settings are explained.
 
+### Commands for anyone
+
+In-game on hypixel.net, you may `/boop BingoParty` (aka the public party leader account) in order to receive a `party invite`.
+
+### Commands for all Bingo Brewers splashers & party moderators
+
 |  Command    |                                                             Functionality                                                             |  Alias(es)      |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 | boopme      | `/boop`s you, the sender, back _if_ you have permissions. You can use this to test if everything is set up and that you are registered correctly.       |
@@ -33,13 +39,17 @@ Features which work differently from Hypixel settings are explained.
 | help        | Points to the link for this readme.                                                                                                   |                 |
 
 
-Developer/account-admin reserved (these won't work or make sense to use for anyone else):
+### Admin commands
+
+Developer/account-admin reserved – these are set to not work for anyone else (due to not making sense to use, or offering too much access):
 
 |  Command       |                                                             Functionality               |  Alias(es)              |
 |----------------|-----------------------------------------------------------------------------------------|-------------------------|
 | cmd            | (Admin-only) executes any command if the sender is the bot account owner.               |                         |
 | printAllowlist | Prints the currently used player data (who with which permissions) to console stdout.   | printallowed, lsallowed |
 | setguide       | Override the Discord-fetched `!p guide` link and set it manually in case of failures.   | sg                      |
+| limbo          | Trigger sending the in-game bot account to Hypixel's "Limbo" area.                      | sendlimbo, §            |
+| close          | The reverse operation to `!p stream`.                                                   |                         |
 
 
 ## Command alias
