@@ -25,8 +25,8 @@ In-game on hypixel.net, you may `/boop BingoParty` (aka the public party leader 
 | promote     | Self-explanatory, but not even strictly required in this system. Leave IGN out to promote yourself.                                   | pro             |
 | kickoffline | Self-explanatory, to make space for new players if party is full as Hypixel's limit is 100 players.                                   | kickafk, ko, ka |
 | kick        | Self-explanatory.                                                                                                                     | remove          |
-| block       | Kick/remove with additional ignore add.                                                                                               | ban             |
-| unblock     | Revert ignore add, but don't re-invite.                                                                                               | unban           |
+| ban         | Kick/remove with additional ignore add.                                                                                               | block           |
+| unban       | Revert ignore add, but don't re-invite.                                                                                               | unblock         |
 | stream      | (Re-)open party into a public one, with default size of 100, useful e.g. after briefly transferring to a non-MVP++ ranked player.     | public, open    |
 | invite      | Self-explanatory. Leave IGN out to invite yourself.                                                                                   | inv             |
 | allinvite   | Toggles the party setting.                                                                                                            |                 |
