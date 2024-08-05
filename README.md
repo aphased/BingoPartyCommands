@@ -18,9 +18,9 @@ In-game on hypixel.net, you may `/boop BingoParty` (aka the public party leader 
 
 |  Command    |                                                             Functionality                                                             |  Alias(es)      |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-| boopme      | `/boop`s you, the sender, back _if_ you have permissions. You can use this to test if everything is set up and that you are registered correctly.       |
+| boopme      | `/boop`s you, the sender, back _if_ you have permissions and DMs enabled. You can use this to test if everything is set up and that you are registered correctly.       |
 | disband     | Is always disallowed.                                                                                                                 |                 |
-| transfer    | Self-explanatory, should not need to be used though.                                                                                  |                 |
+| transfer    | Self-explanatory, should not need to be used though. A receiving IGN has to be specified for this command (unlike with `promote`).    |                 |
 | mute        | Self-explanatory.                                                                                                                     | unmute          |
 | promote     | Self-explanatory, but not even strictly required in this system. Leave IGN out to promote yourself.                                   | pro             |
 | kickoffline | Self-explanatory, to make space for new players if party is full as Hypixel's limit is 100 players.                                   | kickafk, ko, ka |
@@ -52,6 +52,7 @@ Developer/account-admin reserved – these are set to not work for anyone else (
 | close          | The reverse operation to `!p stream`.                                                   |                         |
 | disable        | Temporarily toggle features/commands (e.g. `!p disable promote`).                       |                         |
 | enable         | Undo the above (e.g. `!p enable promote`).                                              |                         |
+| enableall      | Re-enable all currently temporarily disabled commands at once.                          |                         |
 | printDisabled  | List all of the currently deactivated/disabled comamnds.                                | printdisabled, lsdisabled, lstoggled |
 
 
