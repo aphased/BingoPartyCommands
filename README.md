@@ -12,7 +12,8 @@ Features which work differently from Hypixel settings are explained.
 
 ### Commands for anyone
 
-In-game on hypixel.net, you may `/boop BingoParty` (aka the public party leader account) in order to receive a `party invite`.
+- In-game on hypixel.net, you may `/boop BingoParty` (aka the public party leader account) in order to receive a `party invite`.
+- You may request a link to this month's Bingo guide by sending `/pc !guide`. Don't spam this (the command also has a cooldown, and can be easily toggled off on the fly).
 
 ### Commands for all Bingo Brewers splashers & party moderators
 
