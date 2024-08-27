@@ -54,7 +54,7 @@ Developer/account-admin reserved – these are set to not work for anyone else (
 | disable        | Temporarily toggle features/commands (e.g. `!p disable promote`).                       |                         |
 | enable         | Undo the above (e.g. `!p enable promote`).                                              |                         |
 | enableall      | Re-enable all currently temporarily disabled commands at once.                          |                         |
-| printDisabled  | List all of the currently deactivated/disabled comamnds.                                | printdisabled, lsdisabled, lstoggled |
+| printDisabled  | List all of the currently deactivated/disabled commands to the console.                 | printdisabled, lsdisabled, lstoggled |
 
 
 ## Command alias
