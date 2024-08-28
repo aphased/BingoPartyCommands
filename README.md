@@ -19,9 +19,9 @@ Features which work differently from Hypixel settings are explained.
 
 |  Command    |                                                             Functionality                                                             |  Alias(es)      |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-| boopme      | `/boop`s you, the sender, back _if_ you have permissions and DMs enabled. You can use this to test if everything is set up and that you are registered correctly.       |
+| test        | Informs you, the sender, via a reply _iff_ you have permissions. You can use this to test if everything is set up and that you are registered correctly. No response means your IGN is very likely not registered (yet).  | testperms, testcommand |
 | disband     | Is always disallowed.                                                                                                                 |                 |
-| transfer    | Self-explanatory, should not need to be used though. A receiving IGN has to be specified for this command (unlike with `promote`).    |                 |
+| transfer    | Self-explanatory, does not need to be used though. A receiving IGN has to be specified for this command (unlike with `promote`).      |                 |
 | mute        | Self-explanatory.                                                                                                                     | unmute          |
 | promote     | Self-explanatory, but not even strictly required in this system. Leave IGN out to promote yourself.                                   | pro             |
 | kickoffline | Self-explanatory, to make space for new players if party is full as Hypixel's limit is 100 players.                                   | kickafk, ko, ka |
