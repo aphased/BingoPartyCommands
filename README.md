@@ -19,7 +19,7 @@ Features which work differently from Hypixel settings are explained.
 
 |  Command    |                                                             Functionality                                                             |  Alias(es)      |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-| test        | Informs you, the sender, via a reply _iff_ you have permissions. You can use this to test if everything is set up and that you are registered correctly. No response means your IGN is very likely not registered (yet).  | testperms, testcommand |
+| test        | Informs you, the sender, via a reply _iff_ you have permissions. You can use this to test if everything is set up and that you are registered correctly. No response means your IGN is very likely not registered (yet).  | testpermissions, testperms, testcommand |
 | disband     | Is always disallowed.                                                                                                                 |                 |
 | transfer    | Self-explanatory, does not need to be used though. A receiving IGN has to be specified for this command (unlike with `promote`).      |                 |
 | mute        | Self-explanatory.                                                                                                                     | unmute          |
