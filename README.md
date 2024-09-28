@@ -23,7 +23,7 @@ Features which work differently from Hypixel settings are explained.
 | disband     | Is always disallowed.                                                                                                                 |                 |
 | transfer    | Self-explanatory, does not need to be used though. A receiving IGN has to be specified for this command (unlike with `promote`).      |                 |
 | mute        | Self-explanatory.                                                                                                                     | unmute          |
-| promote     | Self-explanatory, but not even strictly required in this system. Leave IGN out to promote yourself.                                   | pro             |
+| promote     | Self-explanatory, but not even strictly required in this system. Leave IGN out to promote yourself.                                   | pro, prom, promo|
 | kickoffline | Self-explanatory, to make space for new players if party is full as Hypixel's limit is 100 players.                                   | kickafk, ko, ka |
 | kick        | Self-explanatory.                                                                                                                     | remove          |
 | ban         | Kick/remove with additional block (ignore) add.                                                                                       | block           |
