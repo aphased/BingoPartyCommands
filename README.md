@@ -19,6 +19,7 @@ Features which work differently from Hypixel settings are explained.
 
 |  Command    |                                                             Functionality                                                             |  Alias(es)      |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------|-----------------|
+| help        | Points to the link for this readme.                                                                                                   |                 |
 | test        | See if YOU are on the permission list, and what permissions you have.  | boopme |
 
 | disband     | Is always disallowed.                                                                                                                 |                 |
@@ -72,8 +73,6 @@ These commands should use the `!sudo` prefix.
 
 |  Command    |                                                             Functionality                                                             |  Alias(es)      |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-| help        | Points to the link for this readme.                                                                                                   |                 |
-
 | printAllowlist | Prints the currently used player data (who with which permissions) to console stdout.   | printallowed, lsallowed |
 | setguide       | Override the Discord-fetched `!p guide` link and set it manually in case of failures.   | sg                      |
 | printDisabled  | List all of the currently deactivated/disabled commands to the console.                 | printdisabled, lsdisabled, lstoggled |
