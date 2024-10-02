@@ -19,18 +19,17 @@ Features which work differently from Hypixel settings are explained.
 
 |  Command    |                                                             Functionality                                                             |  Alias(es)      |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-| test        | Informs you, the sender, via a reply _iff_ you have permissions. You can use this to test if everything is set up and that you are registered correctly. No response means your IGN is very likely not registered (yet).  | testpermissions, testperms, testcommand |
 | disband     | Is always disallowed.                                                                                                                 |                 |
 | transfer    | Self-explanatory, does not need to be used though. A receiving IGN has to be specified for this command (unlike with `promote`).      |                 |
 | mute        | Self-explanatory.                                                                                                                     | unmute          |
-| promote     | Self-explanatory, but not even strictly required in this system. Leave IGN out to promote yourself.                                   | pro, prom, promo|
+| promote     | Self-explanatory, but not even strictly required in this system. Leave IGN out to promote yourself.                                   | pro, prom, promo |
 | kickoffline | Self-explanatory, to make space for new players if party is full as Hypixel's limit is 100 players.                                   | kickafk, ko, ka |
 | kick        | Self-explanatory.                                                                                                                     | remove          |
 | ban         | Kick/remove with additional block (ignore) add.                                                                                       | block           |
 | unban       | Revert block (ignore) add, but don't re-invite.                                                                                       | unblock         |
 | stream      | (Re-)open party into a public one, with default size of 100, useful e.g. after briefly transferring to a non-MVP++ ranked player.     | public, open    |
 | invite      | Self-explanatory. Leave IGN out to invite yourself.                                                                                   | inv             |
-| allinvite   | Toggles the party setting.                                                                                                            |                 |
+| allinvite   | Toggles the party setting.                                                                                                            | allinv, ai | 
 | say         | Players with permissions can talk in party chat during p mute even without Hypixel party mod rank. (and even while not being in the party!) | speak           |
 | repeat      | Like speak, but with built-in repetitions of your message (2 seconds apart, maximum of 7). Defaults to 5 repetitions if the first word of your message isn’t a number. Don’t spam this. Useful e.g. for announcing a splash! | rep          |
 | customrep   | Like repeat, but with more customization options. First argument is number of repetitions, second is waiting duration/pause between each message, then the rest is your text to be output. | customrepeat, crep, crepeat |
@@ -47,15 +46,32 @@ Developer/account-admin reserved – these are set to not work for anyone else (
 |  Command       |                                                             Functionality               |  Alias(es)              |
 |----------------|-----------------------------------------------------------------------------------------|-------------------------|
 | cmd            | (Admin-only) executes any command if the sender is the bot account owner.               |                         |
-| printAllowlist | Prints the currently used player data (who with which permissions) to console stdout.   | printallowed, lsallowed |
-| setguide       | Override the Discord-fetched `!p guide` link and set it manually in case of failures.   | sg                      |
-| limbo          | Trigger sending the in-game bot account to Hypixel's "Limbo" area.                      | sendlimbo, §            |
+| addUser        | Adds users to the permission list |                 |
+| removeUser     | Removes a user from the permission list |                 |
+| getUser     | See if a user is on the permission list, and what permissions they have | query           |
+| preferredName     | Sets your preferred name so the bot knows what to call you | pn              |
 | close          | The reverse operation to `!p stream`.                                                   |                         |
 | disable        | Temporarily toggle features/commands (e.g. `!p disable promote`).                       |                         |
 | enable         | Undo the above (e.g. `!p enable promote`).                                              |                         |
 | enableall      | Re-enable all currently temporarily disabled commands at once.                          |                         |
-| printDisabled  | List all of the currently deactivated/disabled commands to the console.                 | printdisabled, lsdisabled, lstoggled |
 
+### Sudo commands
+
+These commands should use the `!sudo` prefix.
+
+|  Command       |                                                             Functionality               |  Alias(es)              |
+|----------------|-----------------------------------------------------------------------------------------|-------------------------|
+| drain        | Empties the party after a 10 second delay | empty           |
+
+### Not implemented since rewrite
+
+|  Command    |                                                             Functionality                                                             |  Alias(es)      |
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------|-----------------|
+| test        | Informs you, the sender, via a reply _iff_ you have permissions. You can use this to test if everything is set up and that you are registered correctly. No response means your IGN is very likely not registered (yet).  | testpermissions, testperms, testcommand |
+| printAllowlist | Prints the currently used player data (who with which permissions) to console stdout.   | printallowed, lsallowed |
+| setguide       | Override the Discord-fetched `!p guide` link and set it manually in case of failures.   | sg                      |
+| limbo          | Trigger sending the in-game bot account to Hypixel's "Limbo" area.                      | sendlimbo, §            |
+| printDisabled  | List all of the currently deactivated/disabled commands to the console.                 | printdisabled, lsdisabled, lstoggled |
 
 ## Command alias
 
