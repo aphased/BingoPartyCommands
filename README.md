@@ -41,7 +41,7 @@ Features which work differently from Hypixel settings are explained.
 
 ### Admin commands
 
-Developer/account-admin reserved – these are set to not work for anyone else (due to not making sense to use, or offering too much access):
+The following commands are restricted due to the elevated access they provide. They can only be executed by either the developer/bot account administrator, or by users with (Bingo Brewers) staff permission levels. These commands will not be available or functional for other users.
 
 |  Command       |                                                             Functionality               |  Alias(es)              |
 |----------------|-----------------------------------------------------------------------------------------|-------------------------|
@@ -65,13 +65,13 @@ These commands should use the `!sudo` prefix.
 |----------------|-----------------------------------------------------------------------------------------|-------------------------|
 | drain          | Empties the party after a 10 second delay                                               | empty                   |
 
-### Not implemented since rewrite
+### Not yet implemented since rewrite
 
-|  Command    |                                                             Functionality                                          |  Alias(es)      |
-|-------------|--------------------------------------------------------------------------------------------------------------------|-----------------|
-| printAllowlist | Prints the currently used player data (who with which permissions) to console stdout.                           | printallowed, lsallowed |
-| setguide       | Override the Discord-fetched `!p guide` link and set it manually in case of failures.                           | sg                      |
-| printDisabled  | List all of the currently deactivated/disabled commands to the console.                                         | printdisabled, lsdisabled, lstoggled |
+|  Command    |                                                             Functionality                  |  Alias(es)              |
+|----------------|-----------------------------------------------------------------------------------------|-------------------------|
+| printAllowlist | Prints the currently used player data (who with which permissions) to console stdout.   | printallowed, lsallowed |
+| setguide       | Override the Discord-fetched `!p guide` link and set it manually in case of failures.   | sg                      |
+| printDisabled  | List all of the currently deactivated/disabled commands to the console.                 | printdisabled, lsdisabled, lstoggled |
 
 ## Command alias
 
@@ -84,7 +84,7 @@ E.g. using Skytils mod (open config under `/st`, then `Edit Aliases`):
 
 ## Implemented in
 
-- [BingoPartyTools](https://github.com/aphased/BingoPartyTools)
+- [BingoPartyTools](https://github.com/aphased/BingoPartyTools) (currently outdated)
 - [BingoPartyBot](https://github.com/aphased/BingoPartyBot)
 
 
