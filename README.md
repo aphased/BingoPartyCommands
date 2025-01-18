@@ -1,94 +1,187 @@
 # BingoPartyCommands
 
-You know why you're here:
+Table of Contents:
 
-## All available commands
+- [Available commands](#available-commands)
+  - [Public commands](#public-commands)
+  - [Splasher commands](#splasher-commands)
+  - [Staff commands](#staff-commands)
+- [Additional tips](#additional-tips)
+  - [Alias command](#alias-command)
+  - [Discord account linking](#discord-account-linking)
+  - [Alt accounts](#alt-accounts)
+- [Implementations](#implemented-in)
+- [License](#license)
 
-Commands listed in the same line are aliases of one another, meaning they **achieve the same** thing equally, and exist to accommodate more users.
+## Available commands
 
-However, the one used in the primary column is how this feature is referred to in the documentation. Again, any will work, you can use whichever you prefer.
+Commands are executed by running `/msg BingoParty !p <command> <arguments>` in-game, or using the discord command in the bridge channel accessible to all BingoBrewers splashers after linking their accounts.
 
-Features which work differently from Hypixel settings are explained.
+> [!TIP]
+> If you are a BingoBrewers splasher or party moderator, instructions on how to link your Minecraft and Discord accounts can be found in the [`Additional tips`](#additional-tips) section.
 
-### Commands for anyone
+Commands listed in the `Aliases` column are functionally equivalent to the one in the primary column, and exist to accommodate more users, as well as to provide shorter and more memorable alternatives.
 
-- In-game on hypixel.net, you may `/boop BingoParty` (aka the public party leader account) in order to receive a `party invite`.
-- You may request a link to this month's Bingo guide by sending `/pc !guide`. Don't spam this (the command also has a cooldown, and can be easily toggled off on the fly).
+The primary name is generally how the feature is referred to in the documentation, but you can use whichever you prefer.
 
-### Commands for all Bingo Brewers splashers & party moderators
+> [!NOTE]
+> Command usage instructions are noted with specific formatting. Example usage: `!p example <arg1> <arg2.1|arg2.2> [arg3]`
+>
+> - Literal strings are not surrounded by any brackets: `!p example`
+> - Required arguments are wrapped in angle brackets: `<arg1>`
+> - Multiple possible values are separated by a pipe symbol: `<arg2.1|arg2.2>`
+> - Optional arguments are wrapped in square brackets: `[arg3]`
 
-|  Command    |                                                             Functionality                                                             |  Alias(es)       |
-|-------------|---------------------------------------------------------------------------------------------------------------------------------------|------------------|
-| help        | Points to the link for this readme.                                                                                                   |                  |
-| test        | See if YOU are on the permission list, and what permissions you have.                                                                 | boopme           |
-| disband     | Is always disallowed.                                                                                                                 |                  |
-| transfer    | Self-explanatory, does not need to be used though. A receiving IGN has to be specified for this command (unlike with `promote`).      |                  |
-| mute        | Self-explanatory.                                                                                                                     | unmute           |
-| promote     | Self-explanatory, but not even strictly required in this system. Leave IGN out to promote yourself.                                   | pro, prom, promo |
-| kickoffline | Self-explanatory, to make space for new players if party is full as Hypixel's limit is 100 players.                                   | kickafk, ko, ka  |
-| kick        | Self-explanatory.                                                                                                                     | remove           |
-| ban         | Kick/remove with additional block (ignore) add.                                                                                       | block            |
-| unban       | Revert block (ignore) add, but don't re-invite.                                                                                       | unblock          |
-| stream      | (Re-)open party into a public one, with default size of 100, useful e.g. after briefly transferring to a non-MVP++ ranked player.     | public, open     |
-| invite      | Self-explanatory. Leave IGN out to invite yourself.                                                                                   | inv              |
-| allinvite   | Toggles the party setting.                                                                                                            | allinv, ai       | 
-| say         | Players with permissions can talk in party chat during p mute even without Hypixel party mod rank. (and even while not being in the party!) | speak            |
-| repeat      | Like speak, but with built-in repetitions of your message (2 seconds apart, maximum of 7). Defaults to 5 repetitions if the first word of your message isn’t a number. Don’t spam this. Useful e.g. for announcing a splash! | rep          |
-| customrepeat | Like repeat, but with more customization options. First argument is number of repetitions, second is waiting duration/pause between each message, then the rest is your text to be output. | customrep, crep, crepeat |
-| rule        | Output Bingo Brewers' rules as listed in the Discord channel, 1-7. Defaults to saying rule 1 in party chat if no number was provided. |                 |
-| guide       | Posts the link to this month's Bingo Guide by Indigo_Polecat on the [Hypixel Forums](https://hypixel.net). Sends only once per 30 seconds. | gd, g           |
-| poll        | Creates a Hypixel party poll. Don't spam this.                                                                                        |                 |
+### Public commands
 
-### Admin commands
+- In-game on Hypixel, you may `/boop BingoParty` in order to be invited to the party, as an alternative to `/p join BingoParty`.
 
-The following commands are restricted due to the elevated access they provide. They can only be executed by either the developer/bot account administrator, or by users with (Bingo Brewers) staff permission levels. These commands will not be available or functional for other users.
+<!--begin-section-public-commands-->
 
-|  Command       |                                                             Functionality               |  Alias(es)              |
-|----------------|-----------------------------------------------------------------------------------------|-------------------------|
-| cmd            | (Admin-only) executes any command if the sender is the bot account owner.               |                         |
-| limbo          | Sends the bot to Limbo                                                                  | sendlimbo               |
-| addUser        | Adds users to the permission list                                                       |                         |
-| removeUser     | Removes a user from the permission list                                                 |                         |
-| getUser        | See if a user is on the permission list, and what permissions they have                 | query                   |
-| preferredName  | Sets your preferred name so the bot knows what to call you                              | pn                      |
-| close          | The reverse operation to `!p stream`.                                                   |                         |
-| disable        | Temporarily toggle features/commands (e.g. `!p disable promote`).                       |                         |
-| enable         | Undo the above (e.g. `!p enable promote`).                                              |                         |
-| enableall      | Re-enable all currently temporarily disabled commands at once.                          |                         |
-| reload         | Reloads all modifications to commands                                                   | load                    |
+#### Miscellaneous commands
 
-### Sudo commands
+| Command | Functionality                                                                          | Aliases                                                 |
+| ------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| `test`  | Check whether you have party permissions and which permission rank you're assigned to. | `testpermissions`, `testperms`, `testcommand`, `boopme` |
 
-These commands should use the `!sudo` prefix.
+#### Party commands
 
-|  Command       |                                                             Functionality               |  Alias(es)              |
-|----------------|-----------------------------------------------------------------------------------------|-------------------------|
-| drain          | Empties the party after a 10 second delay                                               | empty                   |
+#### Public commands
 
-### Not yet implemented since rewrite
+These commands are publicly usable by sending them directly into the party chat. Use them by running `/pc <command>`.
 
-|  Command    |                                                             Functionality                  |  Alias(es)              |
-|----------------|-----------------------------------------------------------------------------------------|-------------------------|
-| printAllowlist | Prints the currently used player data (who with which permissions) to console stdout.   | printallowed, lsallowed |
-| setguide       | Override the Discord-fetched `!p guide` link and set it manually in case of failures.   | sg                      |
-| printDisabled  | List all of the currently deactivated/disabled commands to the console.                 | printdisabled, lsdisabled, lstoggled |
+| Command  | Functionality                                                           | Aliases |
+| -------- | ----------------------------------------------------------------------- | ------- |
+| `!guide` | Send a link to this month's bingo guide in party chat. (public command) | `!gd`   |
 
-## Command alias
+<!--end-section-public-commands-->
 
-E.g. using Skytils mod (open config under `/st`, then `Edit Aliases`):
-- Left side: `ap`
-- Right side: `msg BingoParty !p`
+### Splasher commands
 
-… and you'll be able to `/ap mute`, `/ap kick spammerIGN`, etc. just like that!
+The following commands can be executed by all BingoBrewers splashers and party moderators.
 
+<!--begin-section-splasher-commands-->
+
+#### Administrative commands
+
+| Command | Usage                 | Functionality                           | Aliases                |
+| ------- | --------------------- | --------------------------------------- | ---------------------- |
+| `query` | `!p query <username>` | Check another person's permission rank. | `getuser`, `queryuser` |
+
+#### Miscellaneous commands
+
+| Command         | Usage                                 | Functionality                                                                                                           | Aliases            |
+| --------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `help`          | `!p help list` or `!p help <command>` | Get information about a specific command, including description, usage and aliases.                                     |                    |
+| `hiderank`      | `!p hiderank [true\|false]`           | Toggle whether the bot should include your hypixel rank in message output.                                              | `hr`, `togglerank` |
+| `link`          | `!p link <discord code>`              | Link your Discord and Minecraft accounts. See tips in the online documentation for more info.                           |                    |
+| `preferredname` | `!p preferredname [alt username]`     | Mark one of your accounts as the main, "preferred" username. This will be the name used by the bot in certain commands. | `pn`, `name`       |
+
+#### Party commands
+
+The following commands allow interaction with the party and moderation thereof.
+
+| Command       | Usage                                                                                               | Functionality                                                                      | Aliases                             |
+| ------------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------- |
+| `allinvite`   | `!p allinvite`                                                                                      | Toggle the ability for anyone to invite people.                                    | `allinv`, `ai`                      |
+| `ban`         | `!p ban <username> [reason]`                                                                        | Kick and `/block add` a player to prevent them from rejoining.                     | `block`                             |
+| `guide`       | `!p guide`                                                                                          | Send a link to this month's bingo guide in party chat.                             | `gd`, `g`                           |
+| `invite`      | `!p invite [username]`                                                                              | Invite someone to the party. Defaults to yourself.                                 | `inv`                               |
+| `kick`        | `!p kick <username>`                                                                                | Kick a player from the party.                                                      | `remove`                            |
+| `kickoffline` | `!p kickoffline`                                                                                    | Kick all offline players from the party.                                           | `ko`, `kickafk`, `ka`               |
+| `mute`        | `!p mute`                                                                                           | Mute/Unmute the party.                                                             | `unmute`                            |
+| `open`        | `!p open [size]`                                                                                    | (Re-)Open the party up to the public (`/stream open`).                             | `public`, `stream`                  |
+| `promote`     | `!p promote [username]`                                                                             | Promote a player to party moderator. Defaults to yourself.                         | `promo`, `prom`, `pro`              |
+| `rule`        | `!p rule [number]`                                                                                  | Send a BingoBrewers rule in party chat.                                            |                                     |
+| `transfer`    | `!p transfer <username>`                                                                            | Transfer the party to someone else. Avoid using this.                              |                                     |
+| `unban`       | `!p unban <username>`                                                                               | Unblock a player (`/block remove`).                                                | `unblock`                           |
+| `splash`      | `!p splash <hub number> [hub id]` or `!p splash /p join <username>` or `!p splash switch <new hub>` | Announce a splash in party chat. The bot will send the announcement several times. | `hub`, `announcesplash`, `announce` |
+| `poll`        | `!p poll <spellbingo\|goalscompleted\|playtime\|splashwhen>`                                        | Start a poll from one of several available poll presets in party chat.             |                                     |
+
+<!--end-section-splasher-commands-->
+
+### Staff commands
+
+The following commands are restricted due to the elevated access they provide. Depending on the function, they are each executable either only by the bot account owner or by users with BingoBrewers staff permissions.
+
+<!--begin-section-staff-commands-->
+
+#### Administrative commands
+
+| Command        | Permission | Usage                                                                               | Functionality                                                                                                                  | Aliases                           |
+| -------------- | ---------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------- |
+| `adduser`      | Staff      | `!p adduser <user> <(updated)permission>` or `!p adduser <new alt> <existing main>` | Add a new user or alt account to the permission database or modify an existing user's permission level.                        | `user`                            |
+| `limbo`        | Staff      | `!p limbo`                                                                          | Manually send the bot to limbo. This shouldn't ever be necessary anymore.                                                      | `sendlimbo`                       |
+| `removeuser`   | Staff      | `!p removeuser <username> [only]`                                                   | Remove a user or a single account from the permission database.                                                                |                                   |
+| `disable`      | Admin      | `!p disable <command1> [command2]...` or `!p disable <all\|most>`                   | Disable bot commands from being used. Note that certain commands can't be disabled.                                            |                                   |
+| `enable`       | Admin      | `!p enable <command1> [command2]...` or `!p enable <all\|some>`                     | Re-enable previously disabled commands.                                                                                        |                                   |
+| `listdisabled` | Admin      | `!p listdisabled`                                                                   | List all currently disabled commands.                                                                                          | `disabled`, `lsdisabled`, `lsoff` |
+| `setguide`     | Admin      | `!p setguide <link> [MM/YYYY]`                                                      | Manually set this month's bingo guide link. Usage is discouraged, configure a discord guide channel in the bot config instead. |                                   |
+| `cmd`          | Owner      | `!p cmd <command>`                                                                  | Execute any command as the bot account.                                                                                        | `execute`, `exec`                 |
+| `reload`       | Owner      | `!p reload`                                                                         | Reload all commands from their file.                                                                                           | `reloadcommands`, `load`          |
+| `setverbosity` | Owner      | `!p setverbosity <verbosity level> [confirm]`                                       | Set the verbosity setting, which can reduce unnecessary chat output.                                                           | `verbosity`                       |
+| `updatenames`  | Owner      | `!p updatenames [confirm]`                                                          | Manually trigger a refresh of all usernames from their UUID using Mojang's API. This is scheduled automatically.               | `refreshnames`                    |
+
+#### Party commands
+
+The following commands allow interaction with the party and moderation thereof.
+
+| Command         | Permission | Usage                 | Functionality                                                | Aliases                     |
+| --------------- | ---------- | --------------------- | ------------------------------------------------------------ | --------------------------- |
+| `close`         | Staff      | `!p close [reason]`   | Close the party to the public (`/stream close`).             | `private`                   |
+| `canceldisband` | Admin      | `!p canceldisband`    | Abort a party disband within the 10 second grace period.     | `cdisband`, `disbandcancel` |
+| `canceldrain`   | Admin      | `!p canceldrain`      | Abort a party drain within the 10 second grace period.       | `cdrain`, `draincancel`     |
+| `disband`       | Admin      | `!p disband [reason]` | Disband the party after a 10 second delay. Avoid using this. |                             |
+| `drain`         | Admin      | `!p drain [reason]`   | Drain the party after a 10 second delay. Avoid using this.   | `empty`                     |
+
+#### Unrestricted chat commands
+
+The following commands provide a way to send arbitrary messages through the bot account, which is reserved to staff due to the risk of its usage getting the bot account punished.
+
+| Command   | Permission | Usage                                                              | Functionality                                                                                               | Aliases                                    |
+| --------- | ---------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| `flea`    | Staff      | `!p flea <message>`                                                | Repeat any message in party chat with predefined parameters. Restricted due to allowing arbitrary messages. | `bossflea`, `bf`                           |
+| `rawpoll` | Staff      | `!p rawpoll <Question/Answer1/Answer2/Optional/Optional/Optional>` | Start a custom poll in party chat. Restricted due to allowing arbitrary messages.                           | `rpoll`                                    |
+| `repeat`  | Staff      | `!p repeat [repetitions] [delay] <message>`                        | Repeat any message in party chat multiple times. Restricted due to allowing arbitrary messages.             | `rep`, `customrepeat`, `crep`, `customrep` |
+| `say`     | Staff      | `!p say <message>`                                                 | Send any message in party chat through the bot. Restricted due to allowing arbitrary messages.              | `speak`                                    |
+
+<!--end-section-staff-commands-->
+
+## Additional tips
+
+### Alias command
+
+Setting up an alias command is recommended to reduce the length of the commands you need to type. This can be accomplished for example using the [Skytils mod](https://github.com/Skytils/SkytilsMod) (open the config under `/st`, then `Edit Aliases`):
+
+Create a new alias and fill the fields as follows:
+
+- **Left side (alias)**: `ap` (you can choose any alias you like, recommended ones are `ap` or `b`)
+- **Right side (command to run)**: `msg BingoParty !p`
+
+> [!NOTE]
+> Notice both values are entered without a leading slash (`/`).
+
+You can now use `/ap mute`, `/ap kick <spammerIGN>`, etc. with much less typing!
+
+### Discord account linking
+
+If you are a BingoBrewers splasher, you have the option to link your Discord account to your Minecraft account(s) for the ability to use BingoParty commands from Discord.
+Follow these steps to link your accounts:
+
+- Use the `/link` command available on Discord in the bridge channel (`#bingo-party-chat-logs`) to obtain a linking code, valid for 5 minutes.
+- Run `/msg BingoParty !p link <code>` in-game with the previously obtained code from the account you wish to link.
+
+If completed successfully, you'll now be able to interact with the bot through Discord using the `/run` command available in the bridge channels.
+
+### Alt accounts
+
+If you'd like to use BingoParty commands from your alt(s), for example if you have a dedicated splashing account, you can ask a bot administrator or any member of staff in BingoBrewers, who will be able to grant your account the appropriate permissions.
 
 ## Implemented in
 
-- [BingoPartyTools](https://github.com/aphased/BingoPartyTools) (currently outdated)
 - [BingoPartyBot](https://github.com/aphased/BingoPartyBot)
-
+- [BingoPartyTools](https://github.com/aphased/BingoPartyTools) (currently outdated, missing most commands)
 
 ## License
 
 BingoPartyCommands is open-sourced software and documentation licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
